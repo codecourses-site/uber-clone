@@ -1,6 +1,11 @@
 # How to Build Uber Clone with React
 
-// TODO: the screenshot should be here.
+![](./screenshots/screenshot1.png)
+![](./screenshots/screenshot2.png)
+![](./screenshots/screenshot3.png)
+![](./screenshots/screenshot4.png)
+![](./screenshots/screenshot5.png)
+![](./screenshots/screenshot6.png)
 
 ## Table of Contents
 
@@ -24,7 +29,7 @@
 
 - For the full course, You can refer to this [link](// TODO: the course link should be here).
 
-- You can refer to this [Youtube video](// TODO: the Youtube video should be here) for the live demo.
+- You can refer to this [Youtube video](https://www.youtube.com/watch?v=zbL1hofCBJo) for the live demo.
 
 <a id="technologies"></a>
 
@@ -65,18 +70,18 @@ To run the demo follow these steps:
 10. Import and inject your secret keys in the **.env** file containing your CometChat and Firebase in this manner.
 
 ```js
-REACT_APP_FIREBASE_API_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
-REACT_APP_FIREBASE_AUTH_DOMAIN = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
-REACT_APP_FIREBASE_DATABASE_URL = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
+REACT_APP_FIREBASE_API_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
+REACT_APP_FIREBASE_AUTH_DOMAIN = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
+REACT_APP_FIREBASE_DATABASE_URL = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
 REACT_APP_FIREBASE_STORAGE_BUCKET =
-  xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
+  xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
 
-REACT_APP_COMETCHAT_APP_ID = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
-REACT_APP_COMETCHAT_REGION = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
-REACT_APP_COMETCHAT_AUTH_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
-REACT_APP_COMETCHAT_API_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
+REACT_APP_COMETCHAT_APP_ID = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
+REACT_APP_COMETCHAT_REGION = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
+REACT_APP_COMETCHAT_AUTH_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
+REACT_APP_COMETCHAT_API_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
 
-REACT_APP_MAP_BOX_API_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx;
+REACT_APP_MAP_BOX_API_KEY = xxx - xxx - xxx - xxx - xxx - xxx - xxx - xxx
 ```
 
 11. Make sure to exclude **.env** in your gitIgnore file from being exposed online.
