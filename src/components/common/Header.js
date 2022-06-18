@@ -24,7 +24,7 @@ function Header() {
         {user && (
           <div className="header__right">
             <img src={user.image} alt={user.email} />
-            <span>Hello, {user.email}</span>
+            <span>Hello, {user.fullname}</span>
           </div>
         )}
       </div>

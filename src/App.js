@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import Chat from "./components/chat/Chat";
 import Home from "./components/home/Home";
 import Loading from "./components/common/Loading";
 import Login from "./components/login/Login";
@@ -152,6 +153,7 @@ function App() {
       <Router>
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
+          <PrivateRoute exact path="/chat" component={Chat} />
           <Route exact path="/login">
             <Login />
           </Route>

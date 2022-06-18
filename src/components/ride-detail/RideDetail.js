@@ -6,6 +6,10 @@ import * as uiService from "../../services/ui";
 
 import Context from "../../context";
 
+import email from "../../images/email.png";
+import exit from "../../images/exit.png";
+import tick from "../../images/tick.png";
+
 const RideDetail = ({ user, isDriver, currentRide }) => {
   const { setCurrentRide } = useContext(Context);
 
@@ -57,10 +61,26 @@ const RideDetail = ({ user, isDriver, currentRide }) => {
       <div className="ride-detail__user-avatar">
         <img src={user.image} alt={user.email} />
       </div>
-      <p className="ride-detail__user-info">
-        {user.email} - {user.phone}
-      </p>
-      <div className="ride-detail__actions">
+      <div className="ride-detail__actions" onClick={talkToUser}>
+        <div className="ride-detail__action">
+          <img src={email} alt="email" />
+        </div>
+        <div className="ride-detail__action" onClick={cancelRide}>
+          <img src={exit} alt="exit" />
+        </div>
+        <div className="ride-detail__action" onClick={finishRide}>
+          <img src={tick} alt="tick" />
+        </div>
+      </div>
+      <div className="ride-detail__content">
+        <p className="ride-detail__result-label">
+          <span>Email: </span>
+          {user.email}
+        </p>
+        <p className="ride-detail__result-label">
+          <span>Phone: </span>
+          {user.phone}
+        </p>
         <p className="ride-detail__result-label">
           <span>From: </span>
           {currentRide.pickup && currentRide.pickup.label
@@ -73,17 +93,6 @@ const RideDetail = ({ user, isDriver, currentRide }) => {
             ? currentRide.destination.label
             : ""}
         </p>
-        <button className="ride-detail__btn" onClick={talkToUser}>
-          {isDriver ? "Talk to User" : "Talk to Driver"}
-        </button>
-        <button className="ride-detail__btn" onClick={cancelRide}>
-          Cancel the Ride
-        </button>
-        {isDriver && (
-          <button className="ride-detail__btn" onClick={finishRide}>
-            Finish the Ride
-          </button>
-        )}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CometChatMessages } from "../cometchat-pro-react-ui-kit/CometChatWorkspace/src";
+import { CometChatMessages } from "../../cometchat-pro-react-ui-kit/CometChatWorkspace/src";
 
 import Context from "../../context";
 
