@@ -74,7 +74,10 @@ function App() {
   const initCurrentRide = () => {
     const currentRide = localStorage.getItem("currentRide");
     if (currentRide) {
-      setCurrentRide(() => JSON.parse(currentRide));
+      const parsedCurrentRide = JSON.parse(currentRide);
+      setCurrentRide(parsedCurrentRide);
+      setSelectedFrom(parsedCurrentRide.pickup);
+      setSelectedTo(parsedCurrentRide.destination);
     }
   };
 
@@ -94,7 +97,7 @@ function App() {
         clearTimeout(lookingDriverTimeout.current);
         setRideRequest(null);
         localStorage.setItem("currentRide", JSON.stringify(updatedRide));
-        setCurrentRide(() => updatedRide);
+        setCurrentRide(updatedRide);
       }
     },
     [rideRequest]
@@ -113,7 +116,6 @@ function App() {
       fbCreatedRideRef.current = firebaseService.getRef(
         `rides/${rideRequest.rideUuid}`
       );
-      console.log(`rides/${rideRequest.rideUuid}`);
       firebaseService.getDataRealtime(
         fbCreatedRideRef,
         onCreatedRideRefUpdated

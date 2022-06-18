@@ -58,7 +58,7 @@ const RideList = () => {
     uiService.hideLoading();
     localStorage.setItem("currentRide", JSON.stringify(request));
     setCurrentRide(request);
-    setSelectedFrom(request.picket);
+    setSelectedFrom(request.pickup);
     setSelectedTo(request.destination);
   };
 
