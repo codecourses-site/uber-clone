@@ -27,7 +27,7 @@
 
 ## 2. Live Demo
 
-- For the full course, You can refer to this [link](// TODO: the course link should be here).
+- For the full course, You can refer to this [link](https://codecourses.site/react/how-to-build-uber-clone-with-react-ep-1/).
 
 - You can refer to this [Youtube video](https://www.youtube.com/watch?v=zbL1hofCBJo) for the live demo.
 
