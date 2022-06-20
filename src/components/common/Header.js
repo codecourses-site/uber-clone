@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import Context from "../../context";
 
-function Header() {
+const Header = () => {
   const { user, setUser } = useContext(Context);
 
   const history = useHistory();
@@ -33,6 +33,6 @@ function Header() {
       </span>
     </div>
   );
-}
+};
 
 export default Header;
