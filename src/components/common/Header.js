@@ -4,17 +4,22 @@ import { useHistory } from "react-router-dom";
 import Context from "../../context";
 
 const Header = () => {
-  const { user, setUser } = useContext(Context);
+  const { user, setUser, cometChat } = useContext(Context);
 
   const history = useHistory();
 
-  const logout = () => {
+  const logout = async () => {
     const isLogout = window.confirm("Do you want to log out ?");
     if (isLogout) {
-      localStorage.removeItem("auth");
-      setUser(null);
+      await cometChat.logout();
+      removeAuthedInfo();
       history.push("/login");
     }
+  };
+
+  const removeAuthedInfo = () => {
+    setUser(null);
+    localStorage.removeItem("auth");
   };
 
   return (

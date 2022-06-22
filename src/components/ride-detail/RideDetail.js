@@ -68,9 +68,11 @@ const RideDetail = ({ user, isDriver, currentRide }) => {
         <div className="ride-detail__action" onClick={cancelRide}>
           <img src={exit} alt="exit" />
         </div>
-        <div className="ride-detail__action" onClick={finishRide}>
-          <img src={tick} alt="tick" />
-        </div>
+        {isDriver && (
+          <div className="ride-detail__action" onClick={finishRide}>
+            <img src={tick} alt="tick" />
+          </div>
+        )}
       </div>
       <div className="ride-detail__content">
         <p className="ride-detail__result-label">
